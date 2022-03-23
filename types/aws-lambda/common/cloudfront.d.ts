@@ -36,7 +36,7 @@ export interface CloudFrontS3Origin {
 }
 
 export interface CloudFrontResponse {
-    status: string;
+    status: string | number;
     statusDescription: string;
     headers: CloudFrontHeaders;
 }
@@ -73,7 +73,7 @@ export interface CloudFrontEvent {
  * https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-generating-http-responses-in-requests.html#lambda-generating-http-responses-object
  */
 export interface CloudFrontResultResponse {
-    status: string;
+    status: string | number;
     statusDescription?: string | undefined;
     headers?: CloudFrontHeaders | undefined;
     bodyEncoding?: 'text' | 'base64' | undefined;
